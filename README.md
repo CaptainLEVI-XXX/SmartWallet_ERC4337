@@ -42,15 +42,15 @@ You can embed `SecurityImpl` from this component in your contract. It contains i
 
 ### Core Contracts
 
-. [**Governor**](#governor): Central configuration and management hub for the protocol.
-. [**Comptroller**](#comptroller): Manages protocol parameters, fees, and thresholds.
-. [**Liquidation**](#liquidation): Handles loan liquidations and self-liquidations.
-. [**Pricer**](#pricer): Fetches and provides market prices of assets from designated oracles.
-. [**Dial**](#dial): Manages and computes dynamic interest rates for different markets.
-. [**Collector**](#collector): Manages liquidation shares and fee collection within the protocol.
-. [**Supply (Deposit Vault Core)**](#supply): Manages deposits and rToken minting.
-. [**Borrow**](#borrow): Handles all borrowing-related operations and collateral management.
-. [**OpenRouter**](#router): Acts as a central routing hub for various protocol components.
+1. [**Governor**](#governor): Central configuration and management hub for the protocol.
+2. [**Comptroller**](#comptroller): Manages protocol parameters, fees, and thresholds.
+3. [**Liquidation**](#liquidation): Handles loan liquidations and self-liquidations.
+4. [**Pricer**](#pricer): Fetches and provides market prices of assets from designated oracles.
+5. [**Dial**](#dial): Manages and computes dynamic interest rates for different markets.
+6. [**Collector**](#collector): Manages liquidation shares and fee collection within the protocol.
+7. [**Supply (Deposit Vault Core)**](#supply): Manages deposits and rToken minting.
+8. [**Borrow**](#borrow): Handles all borrowing-related operations and collateral management.
+9. [**OpenRouter**](#router): Acts as a central routing hub for various protocol components.
 
 ### Governor 
 
