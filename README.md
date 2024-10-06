@@ -42,49 +42,49 @@ You can embed `SecurityImpl` from this component in your contract. It contains i
 
 ### Core Contracts
 
-1. [**Governor**](#governor-contract): Central configuration and management hub for the protocol.
-2. [**Comptroller**](#comptroller-contract): Manages protocol parameters, fees, and thresholds.
-3. [**Liquidation**](#liquidation-contract): Handles loan liquidations and self-liquidations.
-4. [**Pricer**](#pricer-contract): Fetches and provides market prices of assets from designated oracles.
-5. [**Dial**](#dial-contract): Manages and computes dynamic interest rates for different markets.
-6. [**Collector**](#collector-contract): Manages liquidation shares and fee collection within the protocol.
-7. [**Supply (Deposit Vault Core)**](#supply-contract): Manages deposits and rToken minting.
-8. [**Borrow**](#borrow-contract): Handles all borrowing-related operations and collateral management.
-9. [**OpenRouter**](#router-contract): Acts as a central routing hub for various protocol components.
+1. [**Governor**](#governor): Central configuration and management hub for the protocol.
+2. [**Comptroller**](#comptroller): Manages protocol parameters, fees, and thresholds.
+3. [**Liquidation**](#liquidation): Handles loan liquidations and self-liquidations.
+4. [**Pricer**](#pricer): Fetches and provides market prices of assets from designated oracles.
+5. [**Dial**](#dial): Manages and computes dynamic interest rates for different markets.
+6. [**Collector**](#collector): Manages liquidation shares and fee collection within the protocol.
+7. [**Supply (Deposit Vault Core)**](#supply): Manages deposits and rToken minting.
+8. [**Borrow**](#borrow): Handles all borrowing-related operations and collateral management.
+9. [**OpenRouter**](#router): Acts as a central routing hub for various protocol components.
 
-### Governor Contract
+### Governor 
 
 The Governor contract serves as a central configuration and management hub for the protocol. It handles the setup and maintenance of deposit vaults, borrow vaults, asset metadata, and various protocol parameters. The contract also manages integrations with external services, controls access to different functions through role-based permissions, and provides view functions to retrieve critical protocol information.
 
-### Comptroller Contract
+### Comptroller 
 
 Comptroller: The Comptroller contract serves as the central parameter management system for the protocol. It handles setting and retrieving various protocol fees, factors, and thresholds that govern the protocol's operations. The contract also includes role-based access control for administrative functions and provides view functions to access critical protocol parameters.
 
-### Liquidation Contract
+### Liquidation 
 
 The Liquidation contract manages risk through standard, self, and smart liquidations. It handles collateral and loan repayments during liquidation events, validating conditions and processing liquidations efficiently. The contract prioritizes protocol stability by swiftly resolving under-collateralized positions while maintaining fairness for all parties involved.
 
-### Pricer Contract
+### Pricer 
 
 Pricer: The Pricer module serves as the protocol's oracle interface, providing up-to-date asset prices. It supports flexible pair ID settings for easy asset integration and offers asset values in various denominations. The module implements TWAP mechanisms to mitigate short-term price volatility, enhancing overall protocol stability and security.
 
-### Dial Contract
+### Dial 
 
 The Dynamic Interest Module (Dial) manages interest rate mechanics on the Starknet Blockchain. It computes and adjusts rates dynamically across markets, calculating borrowing and staking APRs based on real-time market conditions. The module constantly updates interest rate states to ensure the protocol remains competitive and balanced.
 
-### Collector Contract
+### Collector 
 
 Collector: The Collector contract manages liquidation shares and orchestrates fee collection processes. It facilitates liquidation loss coverage requests and implements a rebate system to incentivize positive user behaviors. By managing liquidation shares and fee distribution, it acts as a crucial financial backstop, reinforcing the protocol's stability.
 
-### Supply Contract
+### Supply 
 
 The Deposit Vault Core contract manages user deposits, issuing rTokens as stake representation. It enables locking and freeing of rTokens for various protocol activities and facilitates asset transfers between deposit and borrow vaults. The contract handles ERC20 token operations and provides transparent access to critical deposit and withdrawal information.
 
-### Borrow Contract
+### Borrow 
 
 The Borrow contract handles all borrowing-related operations within the protocol, including loan creation, repayment, and collateral management. It ensures that loans are adequately collateralized by tracking and managing collateral deposits, calculating loan-to-value ratios, and triggering liquidations if collateral falls below required thresholds. The contract also interacts with third-party decentralized applications, updates debt token prices, and performs loan health checks to maintain the integrity and security of the lending and borrowing processes. 
 
-### Router Contract
+### Router 
 
 The Router contract acts as a central routing hub, managing interactions between various components such as borrowing, lending, and staking within the protocol. It handles the deposit and withdrawal of assets, loan requests, and collateral management, directing these operations to the appropriate subcontracts. 
 
